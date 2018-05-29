@@ -1,0 +1,20 @@
+browser_code/.DS_Store
+browser_code/node_modules/
+browser_code/dist/
+browser_code/npm-debug.log*
+browser_code/yarn-debug.log*
+browser_code/yarn-error.log*
+browser_code/test/unit/coverage/
+
+server_code/node_modules/
+server_code/apps/game/public/
+server_code/logs/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.log

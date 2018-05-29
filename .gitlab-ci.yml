@@ -1,0 +1,27 @@
+stages:
+  - install_deps
+  - test
+
+cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - server_code/node_modules/
+
+# 安装依赖
+install_deps:
+  stage: install_deps
+  script:
+    - whoami
+    - cd server_code
+    - cnpm install
+
+
+# 运行测试用例
+test:
+  stage: test
+  script:
+    - cd server_code
+    - rm -rf node_modules
+    - npm cache clear --force
+    - cnpm install
+    - npm test
